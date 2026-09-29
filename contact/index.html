@@ -14,11 +14,12 @@
 </head>
 <body>
     <h1>Contact</h1>
-    <form action="mailto:noreply@gmail.com" method="post" enctype="text/plain">
-        <label>Email: <input name="email" type="email"></input></label>
-        <label>Subject: <input name="subject"></input></label>
-        <label>Body: <textarea name="body"></textarea></label>
-        <button>Submit</button>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="20aeae3d-9d3f-4561-bb61-2fde651759f3">
+        <label>Email: <input type="email" name="email" required></label>
+        <label>Subject: <input type="text" name="subject" required></label>
+        <label>Body: <textarea name="body" required></textarea></label>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
