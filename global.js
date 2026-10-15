@@ -22,7 +22,15 @@ for (let p of pages) {
     url = BASE_PATH + url;
     }
   let title = p.title;
-  nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`)
+  let a = document.createElement('a');
+    a.href = url;
+    a.textContent = title;
+    if(a.host !== location.host){
+        a.target = "_blank"
+    }
+    nav.append(a);
+    if (a.host === location.host && a.pathname === location.pathname) {
+  a.classList.add('current');}
 };
 
 let navLinks = $$("nav a")
@@ -30,4 +38,3 @@ let currentLink = navLinks.find(
   (a) => a.host === location.host && a.pathname === location.pathname,
 );
 
-currentLink?.classList.add('current');
