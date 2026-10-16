@@ -32,6 +32,15 @@ for (let p of pages) {
     if (a.host === location.host && a.pathname === location.pathname) {
   a.classList.add('current');}
 };
+document.body.insertAdjacentHTML(
+  "afterbegin",'<label class="color-scheme">\
+    Theme:\
+    <select>\
+        <option value="Automatic">Automatic</option>\
+        <option value="Light">Light</option>\
+        <option value="Dark">Dark</option>\
+    </select></label>'
+)
 
 let navLinks = $$("nav a")
 let currentLink = navLinks.find(
