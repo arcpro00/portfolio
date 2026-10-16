@@ -41,6 +41,9 @@ document.body.insertAdjacentHTML(
         <option value="Dark">Dark</option>\
     </select></label>'
 )
+select.addEventListener('input', function (event) {
+  document.documentElement.style.setProperty('color-scheme', event.target.value);
+});
 
 let navLinks = $$("nav a")
 let currentLink = navLinks.find(
