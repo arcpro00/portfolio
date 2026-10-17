@@ -36,14 +36,21 @@ document.body.insertAdjacentHTML(
   "afterbegin",'<label class="color-scheme">\
     Theme:\
     <select>\
-        <option value="Automatic">Automatic</option>\
-        <option value="Light">Light</option>\
-        <option value="Dark">Dark</option>\
+        <option value="light dark">Automatic</option>\
+        <option value="light">Light</option>\
+        <option value="dark">Dark</option>\
     </select></label>'
 )
+let select = document.querySelector("select")
+if ("colorScheme" in localStorage){
+  select.value = localStorage.colorScheme
+  document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
+}
 select.addEventListener('input', function (event) {
   document.documentElement.style.setProperty('color-scheme', event.target.value);
+  localStorage.colorScheme = event.target.value;
 });
+
 
 let navLinks = $$("nav a")
 let currentLink = navLinks.find(
