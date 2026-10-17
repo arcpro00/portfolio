@@ -13,7 +13,7 @@ let pages = [
 let nav = document.createElement('nav');
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
-  : "/arcpro00.github.io/portfolio/";         // GitHub Pages repo name
+  : "/portfolio/";         // GitHub Pages repo name
 
 document.body.prepend(nav);
 for (let p of pages) {
