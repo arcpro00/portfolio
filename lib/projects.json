@@ -8,13 +8,13 @@
     {
         "title": "DSC 80 Project - Spotify Music Popularity Analysis",
         "year": "2026",
-        "image": "../images/music_plot.png",
+        "image": "https://raw.githubusercontent.com/arcpro00/portfolio/main/images/music_plot.png",
         "description": "Analyzed 114,000 Spotify tracks to investigate how audio characteristics influence popularity across music genres. Used hypothesis testing, feature engineering, and random forest regression to reduce prediction error by 27.9% compared to a linear regression baseline, presenting findings through a Jekyll-based website. The github pages is here: https://arcpro00.github.io/music-popularity-analysis/"
     },
     {
         "title": "DSC 106 Project 1 - Protein Cost-Effectiveness vs. Food Processing",
         "year": "2026",
-        "image": "../images/DSC106Project1Visualization.png",
+        "image": "https://raw.githubusercontent.com/arcpro00/portfolio/main/images/DSC106Project1Visualization.png",
         "description": "Developed a Tableau visualization using a simplified GroceryDB dataset to investigate the relationship between food processing levels and protein cost-effectiveness. Cleaned and transformed nutritional data, removed outliers using the IQR method, and visualized trends suggesting that less processed foods provide more protein per dollar on average."
     },
     {
