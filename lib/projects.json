@@ -1,61 +1,73 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, iure, aliquam architecto nobis repellendus sint odit minima in, non ab fugiat blanditiis quam excepturi eligendi maxime. Similique pariatur doloribus sed?"
+        "title": "DSC 106 Project 2 - Persuasive or Deceptive Visualization?",
+        "year": "2026",
+        "image": "https://raw.githubusercontent.com/ndjapri/dsc106-project2/main/images/supporting.png",
+        "description": "We analyze and visualize supporting and opposing arguments around whether states with fewer abortion clinics tend to have lower abortion rates. The sides of the argument are each given a visualization and we then discuss the aspects of those visuals that are persuasive, deceptive, and the what the boundary is between these two concepts. The github pages is here: https://ndjapri.github.io/dsc106-project2/"
     },
     {
-        "title": "Ipsa alias illum sapiente!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nesciunt unde rerum hic nobis laborum ducimus? Ducimus iusto, ea quisquam in suscipit earum nisi omnis autem facere optio alias aperiam vero necessitatibus natus laborum. Earum rerum numquam aspernatur exercitationem."
+        "title": "DSC 80 Project - Spotify Music Popularity Analysis",
+        "year": "2026",
+        "image": "../images/music_plot.png",
+        "description": "Analyzed 114,000 Spotify tracks to investigate how audio characteristics influence popularity across music genres. Used hypothesis testing, feature engineering, and random forest regression to reduce prediction error by 27.9% compared to a linear regression baseline, presenting findings through a Jekyll-based website. The github pages is here: https://arcpro00.github.io/music-popularity-analysis/"
     },
     {
-        "title": "Doloremque rerum commodi unde.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dolorem eaque vero officiis? Eligendi provident dolores placeat ut debitis esse, cumque enim minus ipsa molestiae hic, commodi architecto aliquid saepe neque, officia quidem repellat dolorum nulla? Id, deleniti possimus."
+        "title": "DSC 106 Project 1 - Protein Cost-Effectiveness vs. Food Processing",
+        "year": "2026",
+        "image": "../images/DSC106Project1Visualization.png",
+        "description": "Developed a Tableau visualization using a simplified GroceryDB dataset to investigate the relationship between food processing levels and protein cost-effectiveness. Cleaned and transformed nutritional data, removed outliers using the IQR method, and visualized trends suggesting that less processed foods provide more protein per dollar on average."
     },
     {
         "title": "Ut aliquid deleniti corrupti.",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Alias dicta similique consequatur debitis consequuntur inventore suscipit corporis iure, minus cumque corrupti optio eveniet provident! Harum magnam maxime, animi voluptatum ex similique beatae, corporis ad nobis voluptate corrupti laborum."
     },
     {
         "title": "Dignissimos molestiae quisquam consectetur!",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Incidunt reprehenderit soluta odio voluptatibus dolor hic, dolore, pariatur repellendus voluptatem architecto minima repellat fugiat expedita magni minus perferendis a corrupti nisi quae, nihil inventore ipsa saepe. Atque, ex nostrum."
     },
     {
         "title": "Accusantium deserunt dolor voluptas!",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Illo quod perferendis autem minima id sit hic ea, praesentium quisquam impedit necessitatibus laboriosam cumque amet esse vitae quidem? Aliquam amet delectus at voluptates saepe rerum. Placeat voluptatem dignissimos laboriosam!"
     },
     {
         "title": "Dicta temporibus debitis minus!",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Eveniet, vero voluptatibus quasi optio fuga perferendis odit distinctio? Eaque, quam totam impedit, amet quisquam neque repudiandae dolor quae perferendis est fuga soluta iure libero aliquid, quis suscipit accusantium autem."
     },
     {
         "title": "Architecto quibusdam reiciendis quod.",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Quos error tempore aliquid, beatae expedita minus, quasi similique est inventore quaerat assumenda praesentium neque sunt molestias autem culpa numquam sint eaque architecto nam magnam tempora omnis deserunt. Et, dicta?"
     },
     {
         "title": "Odio repellat ad aliquid?",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Et, nemo numquam? Fugiat laudantium quaerat, eum modi eaque libero, blanditiis voluptatum accusamus aspernatur voluptate, maiores sit! Quasi repellendus iusto doloribus laudantium quod voluptates velit dicta, nobis tempore, pariatur veritatis."
     },
     {
         "title": "Aliquam perferendis similique ad!",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Asperiores quasi natus facere iusto vel fuga explicabo quam laborum. Aperiam ea, eveniet dignissimos ab laboriosam impedit veniam, nulla, id doloremque dicta doloribus placeat obcaecati alias libero non labore deserunt?"
     },
     {
         "title": "Omnis dolor ducimus illum.",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Excepturi ad, doloremque eveniet magnam tempore rem nemo quae? Illo, molestias aliquid. Repellendus, placeat asperiores adipisci officia natus ea eligendi, consectetur deleniti maiores nisi officiis fuga enim aspernatur tempore laborum?"
     },
     {
         "title": "Ducimus tenetur maiores incidunt.",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Temporibus incidunt aspernatur impedit eveniet dolorem facere libero fugiat eius explicabo nesciunt. Odio itaque, consectetur sapiente, velit dolores numquam magnam quaerat quidem repellat possimus quod necessitatibus cum, quasi aliquid placeat!"
     }
