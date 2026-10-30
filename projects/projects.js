@@ -6,12 +6,27 @@ renderProjects(projects, projectsContainer, 'h2');
 const projectsTitle = document.querySelector('.projects-title');
 projectsTitle.textContent = `${projects.length} Projects`;
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
-let data = [1, 2, 3, 4, 5, 5];
-let sliceGenerator = d3.pie();
+let rolledData = d3.rollups(
+  projects,
+  (v) => v.length,
+  (d) => d.year,
+);
+let data = rolledData.map(([year, count]) => {
+  return { value: count, label: year };
+});
+
+let sliceGenerator = d3.pie().value((d) => d.value);
 let arcData = sliceGenerator(data);
 let arcs = arcData.map((d) => arcGenerator(d));
 let colors =  d3.scaleOrdinal(d3.schemeTableau10);
 arcs.forEach((arc,i) => {
-  // TODO, fill in step for appending path to svg using D3
   d3.select('svg').append('path').attr('d', arc).attr('fill', colors(i));
+});
+let legend = d3.select('.legend');
+data.forEach((d, idx) => {
+  legend
+    .append('li')
+    .attr('style', `--color:${colors(idx)}`)
+    .attr('class', 'legend-item') // set the style attribute while passing in parameters
+    .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
 });
