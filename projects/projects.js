@@ -28,28 +28,29 @@ function renderPieChart(projectsGiven) {
   let newArcData = newSliceGenerator(newData);
   let newArcs = newArcData.map((d) => arcGenerator(d));
   let colors =  d3.scaleOrdinal(d3.schemeTableau10);
-  let selectedIndex = -1;
   let newSVG = d3.select('#projects-pie-plot');
   newSVG.selectAll('path').remove();
-  newArcs.forEach((arc,i) => {
-    newSVG
+  newArcs.forEach((arc, i) => {
+  newSVG
     .append('path')
     .attr('d', arc)
     .attr('fill', colors(i))
+    .attr('class',
+      selectedYear === newArcData[i].data.label ? 'selected' : ''
+    )
     .on('click', () => {
-      selectedIndex = selectedIndex === i ? -1 : i;
+      let clickedYear = newArcData[i].data.label;
+      selectedYear = selectedYear === clickedYear ? null : clickedYear;
 
       newSVG
         .selectAll('path')
         .attr('class', (_, idx) =>
-          selectedIndex === idx ? 'selected' : ''
+          selectedYear === newArcData[idx].data.label ? 'selected' : ''
         );
 
-      if (selectedIndex === -1) {
+      if (selectedYear === null) {
         renderProjects(projectsGiven, projectsContainer, 'h2');
       } else {
-        let selectedYear = newArcData[selectedIndex].data.label;
-
         let filteredProjects = projectsGiven.filter(
           (project) => project.year === selectedYear
         );
@@ -68,12 +69,19 @@ function renderPieChart(projectsGiven) {
       .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
   });
 }
-
+let selectedYear = null;
 renderPieChart(projects);
 
 const searchInput = document.querySelector('.searchBar');
-searchInput.addEventListener('change', (event) => {
+searchInput.addEventListener('input', (event) => {
   let filteredProjects = setQuery(event.target.value);
-  renderProjects(filteredProjects, projectsContainer, 'h2');
   renderPieChart(filteredProjects);
+  if (selectedYear === null) {
+    renderProjects(filteredProjects, projectsContainer, 'h2');
+  } else {
+    let yearFilteredProjects = filteredProjects.filter(
+      (project) => project.year === selectedYear
+    );
+    renderProjects(yearFilteredProjects, projectsContainer, 'h2');
+  }
 });
