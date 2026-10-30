@@ -27,6 +27,16 @@ data.forEach((d, idx) => {
   legend
     .append('li')
     .attr('style', `--color:${colors(idx)}`)
-    .attr('class', 'legend-item') // set the style attribute while passing in parameters
-    .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
+    .attr('class', 'legend-item')
+    .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+});
+let query = '';
+let searchInput = document.querySelector('.searchBar');
+searchInput.addEventListener('change', (event) => {
+  query = event.target.value;
+  let filteredProjects = projects.filter((project) => {
+    let values = Object.values(project).join('\n').toLowerCase();
+    return values.includes(query.toLowerCase());
+  });
+  renderProjects(filteredProjects, projectsContainer, 'h2');
 });
