@@ -28,14 +28,36 @@ function renderPieChart(projectsGiven) {
   let newArcData = newSliceGenerator(newData);
   let newArcs = newArcData.map((d) => arcGenerator(d));
   let colors =  d3.scaleOrdinal(d3.schemeTableau10);
+  let selectedIndex = -1;
   let newSVG = d3.select('#projects-pie-plot');
   newSVG.selectAll('path').remove();
   newArcs.forEach((arc,i) => {
     newSVG
-        .append('path')
-        .attr('d', arc)
-        .attr('fill', colors(i));
-  });
+    .append('path')
+    .attr('d', arc)
+    .attr('fill', colors(i))
+    .on('click', () => {
+      selectedIndex = selectedIndex === i ? -1 : i;
+
+      newSVG
+        .selectAll('path')
+        .attr('class', (_, idx) =>
+          selectedIndex === idx ? 'selected' : ''
+        );
+
+      if (selectedIndex === -1) {
+        renderProjects(projectsGiven, projectsContainer, 'h2');
+      } else {
+        let selectedYear = newArcData[selectedIndex].data.label;
+
+        let filteredProjects = projectsGiven.filter(
+          (project) => project.year === selectedYear
+        );
+
+        renderProjects(filteredProjects, projectsContainer, 'h2');
+      }
+    });
+});
   let legend = d3.select('.legend');
   legend.selectAll('li').remove();
   newData.forEach((d, idx) => {

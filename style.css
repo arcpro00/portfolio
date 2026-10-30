@@ -80,6 +80,22 @@ form {
   display:flex;
   align-items: center;
   gap: 2em;
+  &:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+  path {
+    cursor: pointer;
+    transition: 300ms;
+  }
+  .selected {
+    --color: oklch(60% 45% 0) !important;
+
+    &:is(path) {
+      fill: var(--color);
+    }
+  }
 }
 #projects-pie-plot {
   max-width: 20em;
