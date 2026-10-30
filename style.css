@@ -76,6 +76,13 @@ form {
         grid-column: 1 / -1;
     }
 }
+.searchBar {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 1.5em 0;
+  padding: 0.5em;
+}
 .container{
   display:flex;
   align-items: center;
